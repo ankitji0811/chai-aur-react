@@ -1,13 +1,18 @@
 import { useState } from "react";
 
 function App() {
-  let [counterValue, setCounterValue] = useState(15);
+  const [counterValue, setCounterValue] = useState(15);
 
   const addValue = () => {
     // console.log("value added");
     if (counterValue <= 19) {
-      counterValue = counterValue + 1;
-      setCounterValue(counterValue);
+      // counterValue = counterValue + 1;
+      setCounterValue(prev => prev + 1);
+      setCounterValue(prev => prev + 1);
+      setCounterValue(prev => prev + 1);
+      // setCounterValue(counterValue + 1);
+      // setCounterValue(counterValue + 1);
+      // setCounterValue(counterValue + 1);
     } else {
       return;
     }
@@ -17,8 +22,12 @@ function App() {
   const removeValue = () => {
     // console.log("value removed");
     if (counterValue >= 1) {
-      counterValue = counterValue - 1;
-      setCounterValue(counterValue);
+      // counterValue = counterValue - 1;
+      // setCounterValue(counterValue - 1);
+      setCounterValue(prev => prev - 1);
+      setCounterValue(prev => prev - 1);
+      setCounterValue(prev => prev - 1);
+      
     } else {
       return;
     }
